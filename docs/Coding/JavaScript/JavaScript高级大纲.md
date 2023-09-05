@@ -1,4 +1,3 @@
-#js
 # 深入JavaScript高级语法
 
 ## 一. JavaScript运行环境

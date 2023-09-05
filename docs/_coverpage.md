@@ -27,7 +27,7 @@
       </p>
       <div class="main-layout-module" v-if="menuList && menuList.length > 0">
         <span class="main-layout-module-name">
-          <a href="https://github.com/https://github.com/ZhangShuRui" target="_blank"
+          <a href="https://github.com/ZhangShuRui" target="_blank"
             >Github</a
           >
         </span>

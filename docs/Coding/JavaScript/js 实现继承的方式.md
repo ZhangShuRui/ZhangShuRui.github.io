@@ -31,7 +31,7 @@ Student.prototype.studying = function() {
 
 默认两个对象的原型链
 
-![[00 Attachment/Pasted image 20230817112705.png]]
+![[00 Attachment/Pasted%20image%2020230817112705.png]]
 
 核心代码，这段代码放的位置不能随便放，不然会放错对象，导致数据错误
 
@@ -44,13 +44,13 @@ Student.prototype = p
 
 然后原型链变成下面的样子
 
-![[00 Attachment/Pasted image 20230817113415.png]]
+![[00 Attachment/Pasted%20image%2020230817113415.png]]
 
 ### 存在弊端
 
 #### 打印 stu 对象, 继承的属性是看不到的
 
-![[00 Attachment/Pasted image 20230817113923.png]]
+![[00 Attachment/Pasted%20image%2020230817113923.png]]
 
 #### 创建出来两个stu的对象，**获取引用**，修改stu1引用中的值, 会相互影响
 
@@ -76,13 +76,13 @@ console.log(stu2.friends)
 
 ```
 
-![[00 Attachment/Pasted image 20230817133231.png]]
+![[00 Attachment/Pasted%20image%2020230817133231.png]]
 
 在父类中添加 `friends` 属性，然后在子类的实例 `stu1` 中添加数据 `kobe` ，发现在 `stu2` 的实例中也能访问到。
 
 **注意：** 但是如果是直接给当前实例对象赋值，那么就不会有问题
 
-![[00 Attachment/Pasted image 20230817134016.png]]
+![[00 Attachment/Pasted%20image%2020230817134016.png]]
 
 如上图， `name` 属性会直接添加在  `stu1` 身上，那么就不会有影响。
 
@@ -157,7 +157,7 @@ Student.prototype.studying = function () {
 
 ### 原型链图
 
-![[00 Attachment/Pasted image 20230817140051.png]]
+![[00 Attachment/Pasted%20image%2020230817140051.png]]
 
 ### 存在弊端
 
@@ -165,7 +165,7 @@ Student.prototype.studying = function () {
 
 #### p对象存在多出来但是没有必要存在的属性
 
-![[00 Attachment/Pasted image 20230817140703.png]]
+![[00 Attachment/Pasted%20image%2020230817140703.png]]
 
 ## 组合继承
 
@@ -205,7 +205,7 @@ stu.eating()
 
 从原型链图上看如下：
 
-![[00 Attachment/Pasted image 20230817142836.png]]
+![[00 Attachment/Pasted%20image%2020230817142836.png]]
 
 举个例子：如果我们在 `Student.prototype` 中添加自己的方法，由于子类的原型对象现在已经指向了 `Person.prototype` 了，这样子类自己独有的方法会被添加到父类中，导致所有继承父类的子类都可以访问到这个方法，这显然是不对的。
 
@@ -239,7 +239,7 @@ console.log('child2', child2);
 
 ### 原型链图
 
-![[00 Attachment/Pasted image 20230817152854.png]]
+![[00 Attachment/Pasted%20image%2020230817152854.png]]
 
 ## 寄生组合式继承
 
@@ -313,7 +313,7 @@ Student.prototype.studying = function() {
 
 一些小问题：
 
-![[00 Attachment/Pasted image 20230817155220.png]]
+![[00 Attachment/Pasted%20image%2020230817155220.png]]
 
 当我们打印 new 出来的 Student 对象的时候，发现打印的是 Person 对象，这是怎么回事呢？
 
@@ -321,7 +321,7 @@ Student.prototype.studying = function() {
 
 下面是示意图
 
-![[00 Attachment/Pasted image 20230817160444.png]]
+![[00 Attachment/Pasted%20image%2020230817160444.png]]
 
 解决方法
 
